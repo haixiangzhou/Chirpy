@@ -9,9 +9,15 @@
 			<form class="form-auth">
 				<h2>Register</h2>
 				<p class="text-warning"></p>
-				<input type="username" placeholder="Username" class="form-control" /><br>
-				<input type="password" placeholder="Password" class="form-control" /><br>
-				<input type="submit" value="Register" class="btn btn-primary" />
+				<div>
+					<label for="inputUsername">Username</label>
+					<input type="username" class="form-control" id="inputUsername" placeholder="Username"/><br>
+				</div>
+				<div>
+					<label for="inputPassword">Password</label>
+					<input type="password" class="form-control" id="inputPassword" placeholder="Password"/><br>
+				</div>
+				<button class="btn btn-primary" type="submit">Register</button>
 			</form>
 		</section>
 		<script src="js/angular.min.js"></script>
