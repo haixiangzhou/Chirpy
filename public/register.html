@@ -1,26 +1,7 @@
-<html>
-	<head>
-		<title>Chirpy</title>
-		<link rel="stylesheet" href="styles/bootstrap.min.css">
-    	<link rel="stylesheet" href="styles/style.css">
-	</head>
-	<body>
-		<section id="main" class="container">
-			<form class="form-auth">
-				<h2>Register</h2>
-				<p class="text-warning"></p>
-				<div>
-					<label for="inputUsername">Username</label>
-					<input type="username" class="form-control" id="inputUsername" placeholder="Username"/><br>
-				</div>
-				<div>
-					<label for="inputPassword">Password</label>
-					<input type="password" class="form-control" id="inputPassword" placeholder="Password"/><br>
-				</div>
-				<button class="btn btn-primary" type="submit">Register</button>
-			</form>
-		</section>
-		<script src="js/angular.min.js"></script>
-    	<script src="../chirpApp.js"></script>
-	</body>
-</html>
+<form class="form-auth" ng-submit="register()">
+  <h2>Register</h2>
+  <p class="text-warning">{{error_message}}</p>
+  <input type="username" ng-model="user.username" placeholder="Username" class="form-control"><br>
+  <input type="password" ng-model="user.password" placeholder="Password" class="form-control"><br>
+  <input type="submit" value="Register" class="btn btn-primary" />
+</form>

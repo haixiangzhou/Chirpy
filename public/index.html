@@ -1,43 +1,26 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>Chirpy</title>
-		<link rel="stylesheet" href="styles/bootstrap.min.css">
-    	<link rel="stylesheet" href="styles/style.css">
-	</head>
-	<body>
-		<header>
-			<h1 class="page-header">Chirpy <small>Let's enjoy chirpy!</small></h1>
-			<ul class="nav nav-pills">
-				<li class="active"><a href="index.html">Home</a></li>
-				<li><a href="signin.html">Sign in</a></li>
-				<li><a href="register.html">Register</a></li>
-			</ul><br>
-		</header>
-		<section id="main">
-			<form>
-				<div>
-					<label for="inputName">I am</label>
-					<input type="name" class="form-control" id="inputName" placeholder="Your name"/><br>
-				</div>
-				<div>
-					<label for="inputText">Say something!</label>
-					<textarea required class="form-control" id="inputText" maxlength="200" rows="3" placeholder="Say something!"></textarea><br>
-				</div>
-				<button class="btn btn-primary" type="submit">Chirpy!</button>
-			</form>
-		</section>
-		<section id="post-stream">
-			<h4>Chirpy Feed</h4>
-
-		</section>
-		<footer>
-
-		</footer>
-		<script src="js\angular.min.js"></script>
-		<script src="..\app.js"></script>
-	</body>
+  <head>
+    <title>Chirp</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0/angular.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0/angular-route.js"></script>
+    <script src="javascripts/chirpApp.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="stylesheets/style.css">
+  </head>
+  <body ng-app="chirpApp">
+    <div id='main' class="container">
+      <nav class="navbar-fluid navbar-default navbar-fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="#"> Chirp! </a>
+          <p class="navbar-text"> Learn the MEAN stack by building this tiny app</p>
+          <p class="navbar-right navbar-text"><a href="#/login">Login</a> or <a href="#/register">Register</a></p>
+        </div>
+      </nav>
+      <div class="col-md-offset-2 col-md-8">
+        <div ng-view>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
